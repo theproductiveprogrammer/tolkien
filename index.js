@@ -128,14 +128,37 @@ function monkey(data) {
     function replace_random_words_1(data) {
         let words = data.split(' ')
         let num = Math.floor(Math.random()*words.length)
-        for(let i = 0;i < num;i++) {
-            let ndx = Math.floor(words.length * Math.random())
-            let syns = moby.search(words[ndx])
-            if(!syns || !syns.length) continue
-            let repndx = Math.floor(syns.length * Math.random())
-            words.splice(ndx, 1, syns[repndx])
+        if(num < 5 && num > 1 && Math.random() < 1/2) return thesaurus_me_1(words, num)
+        else return alternate_me_1(words, num)
+
+        function thesaurus_me_1(words, num) {
+            let r = []
+            for(let i = 0;i < num;i++) {
+                let ndx = Math.floor(words.length * Math.random())
+                let syns = moby.search(words[ndx])
+                if(!syns || !syns.length) continue
+                let n = Math.floor(syns.length * Math.random())
+                if(n > 5) n = 5
+                if(n < 1) n = 1
+                for(let j = 0;j < n;j++) {
+                    let sndx = Math.floor(syns.length * Math.random())
+                    r.push(syns[sndx])
+                }
+            }
+            return r.join(', ')
         }
-        return words.join(' ')
+
+        function alternate_me_1(words, num) {
+            for(let i = 0;i < num;i++) {
+                let ndx = Math.floor(words.length * Math.random())
+                let syns = moby.search(words[ndx])
+                if(!syns || !syns.length) continue
+                let repndx = Math.floor(syns.length * Math.random())
+                words.splice(ndx, 1, syns[repndx])
+            }
+            return words.join(' ')
+        }
+
     }
 }
 
