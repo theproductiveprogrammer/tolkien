@@ -1,13 +1,13 @@
 # The Tolkien Editor: Unleash your inner creative writer
 Or _How to make an irritating monkey your very best writing companion_
 
-Have you ever wished you someone to help you write better? A writing companion of your very own? How about a cute little monkey that bounces around your room, chattering uproariously as it scatters your drafts left and right and rips your hard work to shreds?
+Have you ever wished you had someone to help you write better? A writing companion of your very own? How about a cute little monkey that bounces around your room, chattering uproariously as it scatters your drafts left and right and rips your hard work to shreds?
 
 Ok. Ok. I how that sounds. You're thinking it's a nightmare! And yet - astonishingly - it turns out that this pesky monkey is the most perfect gift a writer could ever have!
 
 ![tolkien editor icon](./tolkien.png)
 
-Of course, I don't expect you to believe me. It looks a bit loony but give me just a few minutes to convince you. First let me set the stage. Who am I and why should you be listening to me in the first place? Well, I am an engineer by training - and having spent my life writing technical documents meant to be read only by other engineers I found that when I started to write for the general public, my words were not only incomprehensible but - worse - completely boring! They were so bad that when I would fall asleep just reading my notes back to myself!
+Of course, I don't expect you to believe me. It looks a bit loony but give me just a few minutes to convince you. First let me set the stage. Who am I and why should you be listening to me in the first place? Well, I am an engineer by training - and having spent my life writing technical documents meant to be read only by other engineers I found that when I started to write for the general public, my words were not only incomprehensible but - worse - completely boring! They were so bad that I would fall asleep just reading my notes back to myself!
 
 So I discovered, humbly and painfully, the lesson so many of you know: that writing is hard. And let me tell you that it is doubly hard for an engineer - used and trained to the cold hard impersonal terseness of tech-speak. But I wanted - needed - to share my ideas and stories with others. I could not bear them to live inside of me alone. And so I decided one solitary morning, that I needed to master the difficult art of writing, whatever it took of me.
 
@@ -22,13 +22,13 @@ To do this, first we must give up the illusion that we can write. We must surren
 If you allow it, words will flow out of your fingers and onto the page. And do not stand there frowning and checking them as if you are the security guard at the party or the toll collector at the highway. Trust yourself. Let yourself write.
 
 ## The way to write:
-The way to write is simple (although not easy). It consists of just four steps.
+The way to write is simple (although not easy). It consists of just five steps.
 
 1. Set a Goal. Know what you want out of the writing. Breath deeply and allow it to sink into your mind.
 2. Connect with your reader. Sit down next to her and make her real in your mind. Your writing must speak to her directly or it will be no good.
 3. Now let go of everything - doubt, plans, strategies - everything. Be present in the moment and simply write whatever comes to you. Do not edit, or second-guess, or even stop to think about what is happening at the moment. Just let go. Let go and write. You will find your voice begins to sing.
-3. When you are done, take a break. Then go back and edit your writing. Rewrite. Rewrite again. Do it simply and with joy. Polish your rough words. Tune your phrases. Paint different pictures. Play.
-4. Stop and deliver. You will never get it perfect so at some point just stop. It is good enough. And it is good. You can do better but you will do that next time.
+4. When you are done, take a break. Then go back and edit your writing. Rewrite. Rewrite again. Do it simply and with joy. Polish your rough words. Tune your phrases. Paint different pictures. Play.
+5. Stop and deliver. You will never get it perfect so at some point just stop. It is good enough. And it is good. You can do better but you will do that next time.
 
 ## The Monkey
 Now, besides this invaluable method of writing, I found the most interesting nugget in the Letterbook where the author described, almost in passing, that one could drop words, even entire sentences, reorder paragraphs and if you came back to it a week later it would read just as good!
