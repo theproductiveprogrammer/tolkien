@@ -73,7 +73,8 @@ function monkey(data) {
                     u = transformers[j](u)
                 }
                 r.push(o)
-                r.push('. _' + u + '_')
+                u = u.trim()
+                if(u.length) r.push('. _' + u + '_')
             }
         }
         return r.join('\n')
