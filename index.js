@@ -138,7 +138,7 @@ function monkey(data) {
                 let syns = moby.search(words[ndx])
                 if(!syns || !syns.length) continue
                 let n = Math.floor(syns.length * Math.random())
-                if(n > 5) n = 5
+                if(n > 5) n = 7
                 if(n < 1) n = 1
                 for(let j = 0;j < n;j++) {
                     let sndx = Math.floor(syns.length * Math.random())
