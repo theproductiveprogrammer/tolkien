@@ -7,7 +7,7 @@ Have you ever wished you had a writing companion? A cute little monkey that boun
 
 I don't expect you to believe me. It sounds a bit loony but I beg you to give me just a few minutes to convince you. First let me set the stage. Who am I and why should you be listening to me in the first place? Well, I am an engineer by training - and having spent my life writing technical documents meant to be read only by other engineers I found that when I started to write for the general public, my words were not only incomprehensible but - worse - completely boring! They were so bad that when I read my notes back to myself even I would fall asleep.
 
-So I discovered, painfully, the lesson so many of you know: that writing is hard. And let me tell you that it is doubly hard for an engineer - used and trained to the cold hard impersonal terseness of tech-speak. But I wanted - needed - to share my ideas and stories with others. I could not bear them to live inside of me alone. And so I decided one fateful morning, that I needed to master this difficult art of writing, whatever it took of me.
+So I discovered, humbly and painfully, the lesson so many of you know: that writing is hard. And let me tell you that it is doubly hard for an engineer - used and trained to the cold hard impersonal terseness of tech-speak. But I wanted - needed - to share my ideas and stories with others. I could not bear them to live inside of me alone. And so I decided one solitary morning, that I needed to master this difficult art of writing, whatever it took of me.
 
 I took up writing seriously. I started with blog posts. Then I wrote web copy. Marketing copy. Sales copy. I tried my hand writing short stories. I wrote and I wrote and I wrote. Then I wrote some more. Much of it was poor. More was just shy of pathetic. But I persisted. And I improved. I won't lie to you - it was a slow and painful, often humbling, process.
 
@@ -24,26 +24,30 @@ The way to write is simple (although not easy). It consists of just four steps.
 
 1. Set a Goal. Know what you want out of the writing. Breath deeply and allow it to sink into your mind.
 2. Let go of everything. Be present in the moment and simply write whatever comes to you. Do not edit, or second-guess, or even stop to think about what is happening at the moment. Just let go. Let go and write. You will find your voice begins to sing.
-3. When you are done, take a break. Then go back and edit your writing. Rewrite. Rewrite again. Do it simply and with joy. Use different words. Paint different pictures. Play.
+3. When you are done, take a break. Then go back and edit your writing. Rewrite. Rewrite again. Do it simply and with joy. Polish your rough words. Tune your phrases. Paint different pictures. Play.
 4. Stop and deliver. You will never get it perfect so at some point just stop. It is good enough. And it is good. You can do better but you will do that next time.
 
 ## The Monkey
 Now, besides this invaluable method of writing, I found the most interesting nugget in the Letterbook where the author described, almost in passing, that one could drop words, even entire sentences, reorder paragraphs and if you came back to it a week later it would read just as good!
 
-How strange, I thought. How wonderfully remarkable if true. And so interesting that I felt I just had to try it out. Why not? I do not know everything and there are more things in heaven and earth than I can dream of.
+How strange, I thought. How wonderfully remarkable if true. And so interesting that I felt I just had to try it out. Why not? I do not know everything and there are more things in heaven and earth than I can dream of, as Shakespear would say.
 
 And so I did try it. The first time it did feel unnatural. The cluttered and unreadable monkey sentences I found oddly upsetting. But, strange to say, as I progressed I began to find it wonderfully freeing. And - even more important - I found I enjoyed writing a lot more!
 
 You may not be convinced yet. Perhaps you feel this nonsense will not work for you. It feels too complicated. Well it may well be - I can only say what my experience has been. You would have to try it out for yourself and see if it fits you as well. If it does, you will find new enjoyment in writing and your writing will elevate. But it is up to you.
 
-Because of my technical background I created a simple application that "acts like" our pesky primate. I am calling it `Tolkien` - who I hope will take it in the spirit of a tribute from a disciple to a master in the field (and not an insult in being compared to a monkey). With `Tolkien` at your side, trying out the technique is a breeze. If you would like to try and instantly improve your own writing, just give it a shot and see how easy it is!
+Because of my technical background I created this application that "acts like" our pesky primate. I am calling it `Tolkien` - who I hope will take it in the spirit of a tribute from a disciple to a master in the field (and not an insult in being compared to a monkey). With `Tolkien` at your side, trying out the technique is a breeze. If you would like to try and instantly improve your own writing, just give it a shot and see how easy it is!
 
 # Using Tolkien
-As of now, alas, you have to use the strange and wonderful [vim](https://www.vim.org/).
-* Set `tw=0`
-* On every save (`:w`) reload the changed file (`:e`)
+To use `Tolkien` you need a good [modern text editor](https://www.lifehacker.com.au/2014/04/five-best-text-editors-2/) where you can edit plain text files (MSWord and Pages will not work for now).
 
-This is a pain but we'll have a nice web version soon!
+1. Download this application and point it to the file you are working in:
+
+        node . 'My Writing.txt'
+
+2. Now every time you save your file, `Tolkien` will monkey around with it. So you need to save the file and immediately reload it. Many editors automatically detect this change and will ask you to reload the file. If it does not, you need to find how to 'refresh' your file from disk. (For example, in [vim](https://www.vim.org/) you can be save(`:w`) and reload (`:e`)).
+
+This is a bit geeky, I know, but there will be a web version soon.
 
 # And Yes, it is safe to use
 I know what you're thinking - what? I should let this monkey tear up all my work? My sweat and tears? "Of course," you say, "Some of my writing can be improved but I have taken the trouble and produced some real gems here! This is no way write winning prose if it is snatched out of my hands even as I type."
