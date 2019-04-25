@@ -1,7 +1,7 @@
 {
-  "name": "tolkien",
+  "name": "@tpp/tolkien",
   "version": "0.1.0",
-  "description": "Editor that helps you unleash your inner creativity",
+  "description": "The Editor that helps you unleash your inner creativity",
   "main": "index.js",
   "author": "charles.lobo@gmail.com",
   "license": "MIT",
