@@ -5,7 +5,7 @@ Have you ever wished you had someone to help you write better? A writing compani
 
 Ok. Ok. I how that sounds. You're thinking it's a nightmare! And yet - astonishingly - it turns out that this pesky monkey is the most perfect gift a writer could ever have!
 
-![tolkien editor icon](./tolkien.png)
+![tolkien editor icon](tolkien.png)
 
 Of course, I don't expect you to believe me. It looks a bit loony but give me just a few minutes to convince you. First let me set the stage. Who am I and why should you be listening to me in the first place? Well, I am an engineer by training - and having spent my life writing technical documents meant to be read only by other engineers I found that when I started to write for the general public, my words were not only incomprehensible but - worse - completely boring! They were so bad that I would fall asleep just reading my notes back to myself!
 
