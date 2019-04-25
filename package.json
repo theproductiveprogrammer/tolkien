@@ -1,0 +1,13 @@
+{
+  "name": "tolkien",
+  "version": "0.1.0",
+  "description": "Editor that helps you unleash your inner creativity",
+  "main": "index.js",
+  "author": "charles.lobo@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@tpp/frag": "^1.1.1",
+    "moby": "^1.1.2",
+    "sha.js": "^2.4.11"
+  }
+}
