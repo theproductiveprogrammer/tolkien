@@ -1,6 +1,6 @@
 {
   "name": "@tpp/tolkien",
-  "version": "0.5.2",
+  "version": "1.0.0",
   "description": "The Editor that helps you unleash your inner creativity",
   "main": "index.js",
   "author": "charles.lobo@gmail.com",
@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@tpp/frag": "^1.1.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
     "moby": "^1.1.2",
+    "pluralize": "^7.0.0",
+    "serve-static": "^1.14.1",
     "sha.js": "^2.4.11"
   }
 }

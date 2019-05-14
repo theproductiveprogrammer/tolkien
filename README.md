@@ -42,15 +42,31 @@ You may not be convinced yet. Perhaps you feel this nonsense will not work for y
 Because of my technical background I created this application that "acts like" our pesky primate. I am calling it `Tolkien` - who I hope will take it in the spirit of a tribute from a disciple to a master in the field (and not an insult in being compared to a monkey). With `Tolkien` at your side, trying out the technique is a breeze. If you would like to try and instantly improve your own writing, just give it a shot and see how easy it is!
 
 # Using Tolkien
-To use `Tolkien` you need a good [modern text editor](https://www.lifehacker.com.au/2014/04/five-best-text-editors-2/) where you can edit plain text files (MSWord and Pages will not work for now).
+
+Tolkien runs in two versions:
+
+1. A Web Application that you can use from any browser
+2. A Command-Line version that you can use with any good text editor
+
+## Tolkien on the Web
+
+To use `Tolkien` on the web simply start up the server:
+
+        node .
+
+then and point to it from your browser and you're ready to go!
+
+        http://localhost:8080/
+
+## Tolkien on the Command Line
+
+To use `Tolkien` on the command line you need a good [modern text editor](https://www.lifehacker.com.au/2014/04/five-best-text-editors-2/) where you can edit plain text files (MSWord and Pages will not work for now).
 
 1. Download this application and point it to the file you are working in:
 
-        node . 'My Writing.txt'
+        node cmdline.js 'My Writing.txt'
 
 2. Now every time you save your file, `Tolkien` will monkey around with it. So you need to save the file and immediately reload it. Many editors automatically detect this change and will ask you to reload the file. If it does not, you need to find how to 'refresh' your file from disk. (For example, in [vim](https://www.vim.org/) you can be save(`:w`) and reload (`:e`)).
-
-This is a bit geeky, I know, but there will be a web version soon.
 
 # And Yes, it is safe to use
 I know what you're thinking - what? I should let this monkey tear up all my work? My sweat and tears? "Of course," you say, "Some of my writing can be improved but I have taken the trouble and produced some real gems here! This is no way write winning prose if it is snatched out of my hands even as I type."
