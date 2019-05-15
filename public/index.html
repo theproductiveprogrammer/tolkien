@@ -10,26 +10,33 @@
 </head>
 <body>
     <div id=col>
+        <div id=acts>
+            <a id=new href=/ target=_blank>+</a>
+            <a id=prvbtn onclick=toggle_prv()></a>
+        </div>
         <h1 id=title>Tolkien</h1>
         <div id=instructions>
             <img id=icon alt="icon" src="tolkien.clr.png">
             <div id=link>
-                Tolkien is a simple editor whose singular focus is to
-                unleash your inner Creative Writer. Almost everyone
-                starts off finding it strange to use but those who make
-                it past the initial hump find it surprisingly powerful
-                and enjoyable to use.
+                Writing is hard. All serious writers know that.
                 <p>
-                If you need to make your words sing and have all your
-                readers happily follow you and your ideas, then you need
-                Tolkien.
-                <p>
-                To find out more on how it works
+                Tolkien is an editor that helps you let go and get those
+                creative juices flowing. It's weird and messy and you
+                will find it clumsy to use at first. It's almost like
                 <a href=https://github.com/theproductiveprogrammer/tolkien#readme>
-                    click here.
+                    an annoying little monkey stamping all over your code
                 </a>
-
-                Otherwise, just start writing.
+                but it can make you fall in love
+                with writing all over again. More importantly - it makes
+                your readers fall in love with you again.
+                <p>
+                Tolkien makes writing fun.
+                <a href=https://github.com/theproductiveprogrammer/tolkien#readme>
+                    Learn How
+                </a>
+                or Just Start Writing!
+                <p>
+                Enjoy.
             </div>
             <ol id=steps>
                 <li>Set a Goal</li>
@@ -37,7 +44,8 @@
                 <li>Write!</li>
             </ol>
         </div>
-        <textarea id=ta></textarea>
+        <textarea id=ta placeholder='write here'></textarea>
+        <div id=prv><div id=prvtitle></div><div id=prvtxt></div></div>
         <button id=btn>Monkey Around (Shift+Enter)</button>
         <button id=clean>Clean Up!</button>
         <div id=footer>
@@ -50,6 +58,23 @@
 #col,#title, #instructions {
     margin: 0 auto;
     width: 400px;
+}
+#acts {
+    position: relative;
+    font-size: 14px;
+    color: #ccc;
+}
+#new {
+    text-decoration: overline;
+}
+#new:hover,#prvbtn:hover {
+    color: black;
+}
+#prvbtn {
+    position: absolute;
+    right: 0;
+    text-decoration: overline;
+    cursor: pointer;
 }
 #icon {
     display: block;
@@ -104,6 +129,9 @@
 #btn.writing, #clean.writing {
     display: block;
 }
+#btn.prv, #clean.prv {
+    display: none;
+}
 #title {
     margin-top: 1em;
     margin-bottom: 0.25em;
@@ -116,6 +144,9 @@
     margin-bottom: 1em;
     animation: 10s pulse infinite alternate;
 }
+#title.prv {
+    display: none;
+}
 #ta {
     width: 400px;
     height: 400px;
@@ -125,10 +156,30 @@
     font-weight: 400;
     font-size: 20px;
 }
+#prv {
+    margin: 2em 0;
+    width: 400px;
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    font-weight: 400;
+    font-size: 20px;
+}
 #ta:focus {
     border: none;
     box-shadow: 0;
     outline: none !important;
+}
+#ta.prv {
+    display: none;
+}
+#prv {
+    display: none;
+}
+#prvtitle {
+    font-weight: bold;
+    font-size: 24px;
+}
+#prv.prv {
+    display: block;
 }
 
 #footer {
@@ -162,9 +213,49 @@
         let btn = document.getElementById('btn')
         let clean = document.getElementById('clean')
         let ta = document.getElementById('ta')
-        let started = false
+        let prv = document.getElementById('prv')
+        let prvtitle = document.getElementById('prvtitle')
+        let prvtxt = document.getElementById('prvtxt')
 
         ta.focus()
+
+        let started = false
+        let prvon = false
+        function toggle_prv() {
+            if(!started) return
+            if(prvon) prvoff_1()
+            else prvon_1()
+
+            function prvon_1() {
+                prvon=true
+
+                let txt = ta.value ? ta.value : ""
+                let lines = txt.split('\n')
+                let title_ = lines.shift()
+                if(!title_) title_ = ""
+                txt = lines.join('\n')
+                if(!txt) txt = ""
+                prvbtn.innerText = "write"
+                prvtitle.innerText = title_
+                prvtxt.innerText = txt
+                prv.className = 'prv'
+                ta.className = 'prv'
+                title.className = 'prv'
+                btn.className = 'prv'
+                clean.className = 'prv'
+            }
+
+            function prvoff_1() {
+                prvon = false
+
+                prv.className = ''
+                ta.className = ''
+                prvbtn.innerText = "view"
+                title.className = 'writing'
+                btn.className = 'writing'
+                clean.className = 'writing'
+            }
+        }
 
         function withData(url_) {
             ta.focus()
@@ -215,6 +306,8 @@
 
 
         function startedWriting() {
+            started = true
+            prvbtn.innerText = "view"
             title.innerText = "Write"
             title.className = "writing"
             btn.className = "writing"
