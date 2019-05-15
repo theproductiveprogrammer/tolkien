@@ -324,12 +324,21 @@
             instructions.className = "writing"
         }
 
-        ta.onpaste = () => {
+        ta.oninput = () => {
             if(!started) startedWriting()
         }
-        ta.onkeypress = (e) => {
-            if(!started) startedWriting()
-            if(e.keyCode == 13 && e.shiftKey) monkey()
+
+        ta.onkeyup = (e) => {
+            if(e.keyCode == 13) {
+                if(e.shiftKey) monkey()
+                else {
+                    let txt = ta.value ? ta.value : ""
+                    let cursor = ta.selectionEnd ? ta.selectionEnd : ta.selectionStart
+                    if(txt[cursor-1] == '\n'
+                        && txt[cursor-2] == '\n'
+                        && txt[cursor-3] != '\n') monkey()
+                }
+            }
         }
 
         btn.onclick = monkey
