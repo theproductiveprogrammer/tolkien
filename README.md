@@ -1,6 +1,8 @@
 # The Tolkien Editor: Unleash your inner creative writer
 Or _How to make an irritating monkey your very best writing companion_
 
+http://tolkien.theproductiveprogrammer.blog
+
 Have you ever wished you had someone to help you write better? A writing companion of your very own? How about a cute little monkey that bounces around your room, chattering uproariously as it scatters your drafts left and right and rips your hard work to shreds?
 
 Ok. Ok. I how that sounds. You're thinking it's a nightmare! And yet - astonishingly - it turns out that this pesky monkey is the most perfect gift a writer could ever have!
@@ -43,12 +45,20 @@ Because of my technical background I created this application that "acts like" o
 
 # Using Tolkien
 
-Tolkien runs in two versions:
+Just point your browser to:
+
+http://tolkien.theproductiveprogrammer.blog
+
+![tolkien editor icon](public/tolkien.clr.png)
+
+And you're good to go!
+
+If you want to host your own open source copy - `Tolkien` runs in two versions:
 
 1. A Web Application that you can use from any browser
 2. A Command-Line version that you can use with any good text editor
 
-## Tolkien on the Web
+## Running the Tolkien Web Application
 
 To use `Tolkien` on the web simply start up the server:
 
@@ -58,7 +68,7 @@ then and point to it from your browser and you're ready to go!
 
         http://localhost:8080/
 
-## Tolkien on the Command Line
+## Running the Tolkien Command Line Application
 
 To use `Tolkien` on the command line you need a good [modern text editor](https://www.lifehacker.com.au/2014/04/five-best-text-editors-2/) where you can edit plain text files (MSWord and Pages will not work for now).
 
