@@ -54,7 +54,7 @@
             </ol>
         </div>
         <textarea id=ta placeholder='write here'></textarea>
-        <div id=prv><div id=prvtitle></div><div id=prvtxt></div></div>
+        <div id=prv></div>
         <button id=btn>Monkey Around (Shift+Enter)</button>
         <button id=clean>Clean Up!</button>
         <div id=footer>
@@ -183,9 +183,17 @@
 #prv {
     display: none;
 }
-#prvtitle {
+.prvtitle {
     font-weight: bold;
     font-size: 24px;
+}
+.prvmonkey {
+    font-style: italic;
+    color: #ccc;
+    font-size: 0.8em;
+}
+.prvtxt {
+    padding-top: 0.8em;
 }
 #prv.prv {
     display: block;
@@ -223,8 +231,6 @@
         let clean = document.getElementById('clean')
         let ta = document.getElementById('ta')
         let prv = document.getElementById('prv')
-        let prvtitle = document.getElementById('prvtitle')
-        let prvtxt = document.getElementById('prvtxt')
 
         ta.focus()
 
@@ -240,18 +246,30 @@
 
                 let txt = ta.value ? ta.value : ""
                 let lines = txt.split('\n')
-                let title_ = lines.shift()
-                if(!title_) title_ = ""
-                txt = lines.join('\n')
-                if(!txt) txt = ""
+
+                prv.innerHTML = ""
+                for(let i = 0;i < lines.length;i++) {
+                    add_line_1(lines[i], i ? 'prvtxt' : 'prvtitle')
+                }
+
                 prvbtn.innerText = "write"
-                prvtitle.innerText = title_
-                prvtxt.innerText = txt
                 prv.className = 'prv'
                 ta.className = 'prv'
                 title.className = 'prv'
                 btn.className = 'prv'
                 clean.className = 'prv'
+            }
+
+            function is_monkey_1(l) {
+                return l && l.startsWith(">>      ")
+            }
+
+            function add_line_1(line, class_) {
+                if(is_monkey_1(line)) class_ = 'prvmonkey'
+                let e = document.createElement('div')
+                e.className = class_
+                e.innerText = line
+                prv.appendChild(e)
             }
 
             function prvoff_1() {
