@@ -3,7 +3,7 @@ Or _How to make an irritating monkey your very best writing companion_
 
 http://tolkien.theproductiveprogrammer.blog
 
-![thumb](video-thumbnail.png) [Video Demo](https://youtu.be/KJen06YhI4Y)
+![thumb](video-thumbnail.png) [Video Demo](https://youtu.be/Rw9WiB_cW_Y)
 
 Have you ever wished you had someone to help you write better? A writing companion of your very own? How about a cute little monkey that bounces around your room, chattering uproariously as it scatters your drafts left and right and rips your hard work to shreds?
 
@@ -55,7 +55,7 @@ http://tolkien.theproductiveprogrammer.blog
 
 And you're good to go!
 
-![thumb](video-thumbnail.png) [Video Demo](https://youtu.be/KJen06YhI4Y)
+![thumb](video-thumbnail.png) [Video Demo](https://youtu.be/Rw9WiB_cW_Y)
 
 If you want to host your own open source copy - `Tolkien` runs in two versions:
 
