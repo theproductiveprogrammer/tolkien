@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 
 app.use('/monkey', (req, res) => {
     let data = req.body
-    if(!data) return res.status(400).end()
+    if(!data || !data.txt) return res.status(400).end()
     let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
     let dt = (new Date()).toISOString()
     let txt = data.txt.substring(0, 10).replace(/[\n\r]/g, '')
