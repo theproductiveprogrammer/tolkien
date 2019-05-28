@@ -300,6 +300,7 @@
                     ta.selectionEnd = upd.cursor
                     ta.blur()
                     ta.focus()
+                    setCleaningUp()
                 }
             })
         }
@@ -342,8 +343,29 @@
             instructions.className = "writing"
         }
 
+        let cleaningup = 0
+        let prev_val
+        const MONKEY_MARKER = '>>      '
+        const MONKEY_MARKER_RX = /\n>>      /g
+        function setCleaningUp() {
+            let pv = prev_val
+            let v = ta.value
+            prev_val = v
+            if(!pv) return
+            if(pv.length - v.length < MONKEY_MARKER.length) return
+            let pnum_lines = pv.split(MONKEY_MARKER_RX).length
+            let num_lines = v.split(MONKEY_MARKER_RX).length
+            if(num_lines < pnum_lines) {
+                if(!cleaningup) cleaningup = 1
+                else cleaningup++
+                if(cleaningup > 4) cleaningup = 4
+            }
+        }
+
+
         ta.oninput = () => {
             if(!started) startedWriting()
+            setCleaningUp()
         }
 
         ta.onkeyup = (e) => {
@@ -354,7 +376,10 @@
                     let cursor = ta.selectionEnd ? ta.selectionEnd : ta.selectionStart
                     if(txt[cursor-1] == '\n'
                         && txt[cursor-2] == '\n'
-                        && txt[cursor-3] != '\n') monkey()
+                        && txt[cursor-3] != '\n') {
+                        if(cleaningup > 0) cleaningup--
+                        else monkey()
+                    }
                 }
             }
         }
