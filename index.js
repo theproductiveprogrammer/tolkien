@@ -105,7 +105,8 @@ function cleanMonkey(marker, data) {
     let paras = data.split('\n')
     for(let i = 0;i < paras.length;i++) {
         let l = paras[i]
-        if(isMonkeyChanges(l)) {
+        let clean_l = l.replace(marker, '')
+        if(isMonkeyChanges(clean_l)) {
             if(l.indexOf(marker) >= 0) {
                 let p = r.pop()
                 if(p) {
