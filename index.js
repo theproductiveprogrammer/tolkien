@@ -222,7 +222,8 @@ function monkey(marker, data) {
                 if(n < 1) n = 1
                 for(let j = 0;j < n;j++) {
                     let sndx = Math.floor(syns.length * Math.random())
-                    r.push(syns[sndx])
+                    let rep = syns[sndx] ? syns[sndx].trim() : ''
+                    if(rep) r.push(rep)
                 }
             }
             return r.join(', ')
