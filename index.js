@@ -234,7 +234,8 @@ function monkey(marker, data) {
                 let syns = moby.search(words[ndx])
                 if(!syns || !syns.length) continue
                 let repndx = Math.floor(syns.length * Math.random())
-                words.splice(ndx, 1, syns[repndx])
+                let rep = syns[repndx] ? syns[repndx].trim() : ''
+                words.splice(ndx, 1, rep)
             }
             return words.join(' ')
         }
