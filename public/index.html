@@ -312,17 +312,55 @@ const copyToClipboard = str => {
             }
         }
 
+        /*      problem/
+         * If it takes too long for the response
+         * the user could have made changes in
+         * the original text which will then be
+         * lost when the monkey-ed text replaces
+         * the original text.
+         *      way/
+         * If the response has taken more than
+         * two seconds, we simply ignore it.
+         */
+        const MAX_TIME = 1000 * 2
+
+        let sending
         function withData(url_) {
+            if(sending) return
+            sending = true
             ta.focus()
             let o = {
                 txt: ta.value,
                 cursor: ta.selectionStart,
+                start: Date.now(),
             }
             send2Server(url_, o, (err, upd) => {
+                sending = false
                 if(err) {
                     alert('Error!')
                     console.error(err)
                 } else {
+                    let d = Date.now() - o.start
+                    if(d > MAX_TIME) {
+                        console.error('Timeout - server took too long to respond!')
+                        return
+                    }
+
+                    let xtra = find_xtra(ta.value, o.txt)
+                    if(xtra) {
+                        if(xtra.length > 1) {
+                            console.error('Too many changes to merge!', xtra)
+                            return
+                        }
+                        if(xtra.length == 1 && upd.cursor) {
+                            let txt = upd.txt.substring(0, upd.cursor)
+                            txt += xtra[0]
+                            txt += upd.txt.substring(upd.cursor)
+                            upd.cursor += xtra[0].length
+                            upd.txt = txt
+                        }
+                    }
+
                     ta.value = upd.txt
                     ta.selectionStart = upd.cursor
                     ta.selectionEnd = upd.cursor
@@ -331,6 +369,16 @@ const copyToClipboard = str => {
                     setCleaningUp()
                 }
             })
+        }
+
+        function find_xtra(v1, v2) {
+            let l1 = v1.split('\n')
+            let l2 = v2.split('\n')
+            let xtra = []
+            for(let i = 0;i < l1.length;i++) {
+                if(l1[i] != l2[i]) xtra.push(l1[i])
+            }
+            return xtra
         }
 
         function monkey() {
