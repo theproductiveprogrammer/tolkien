@@ -8,6 +8,8 @@ const bodyParser = require('body-parser')
 const moby = require('moby')
 const pluralize = require('pluralize')
 
+const randomPhrase = require('./random_phrase')
+
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 
@@ -126,7 +128,7 @@ function cleanMonkey(marker, data) {
  */
 function monkey(marker, data) {
     data = play_with_paragraphs_1(data)
-    data = withParas(data, [play_with_sentences_1, play_with_words_1])
+    data = withParas(data, [play_with_sentences_1, play_with_words_1, random_phrase_1])
     return data
 
     function remove_dummy_marker(txt) {
@@ -199,6 +201,12 @@ function monkey(marker, data) {
             words.splice(ndx, 1)
         }
         return words.join(' ')
+    }
+
+    function random_phrase_1(data) {
+        if(!data) return data
+        if(Math.random() < 9/10) return data
+        return randomPhrase()
     }
 
     function replace_random_words_1(data) {
